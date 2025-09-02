@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הכיסאות החדשים לבית כנסת רעות</title>
+    <title>להושיבי עם נדיבים - בית כנסת רעות</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -15,18 +15,72 @@
             direction: rtl;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 40px auto;
             background: #fff;
             border-radius: 18px;
             box-shadow: 0 4px 24px rgba(0,0,0,0.08);
             padding: 32px 24px;
         }
+        .project-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+            padding: 24px;
+            margin: 24px 0;
+            border-right: 4px solid #3b82f6;
+        }
         h1 {
             color: #2b3a55;
-            font-size: 2.1em;
+            font-size: 2.4em;
             margin-bottom: 0.5em;
             text-align: center;
+        }
+        h2 {
+            color: #1e40af;
+            font-size: 1.5em;
+            margin-bottom: 0.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .progress-bar {
+            background: #e5e7eb;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 16px 0;
+            position: relative;
+        }
+        .progress-fill {
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.3s ease;
+        }
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #1f2937;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .amount-display {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .main-amount {
+            font-size: 2.8em;
+            color: #1e40af;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .amount-label {
+            color: #6b7280;
+            font-size: 1.1em;
+            margin: 5px 0;
         }
         .highlight {
             color: #b48e5c;
@@ -35,6 +89,24 @@
         }
         .section {
             margin-bottom: 1.5em;
+        }
+        .details-list {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .detail-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            color: #1e40af;
         }
         .bank-details, .credit-details, .supplier-details {
             background: #f6f6f6;
@@ -60,6 +132,13 @@
             vertical-align: middle;
             margin-left: 0.3em;
         }
+        .blueprint-section {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f0f4f8;
+            border-radius: 12px;
+        }
         a {
             color: #2b3a55;
             text-decoration: underline;
@@ -68,23 +147,132 @@
 </head>
 <body>
     <div class="container">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="reut.png" alt="רעות" style="height: 80px; width: auto;">
+        </div>
+        <h1>להושיבי עם נדיבים - מגבית לימים נוראים</h1>
+
+        <div class="section">
+            <p style="text-align: center; font-size: 1.2em; color: #4b5563; margin-bottom: 30px;">
+                יחד נבנה ונשפר את מקום התפילה והלימוד שלנו
+            </p>
+        </div>
+
+        <!-- פרויקט 1: כסאות חדשים -->
+        <div class="project-card">
             <div style="text-align:center; margin-bottom: 24px;">
                 <img src="reut-rihut.jpg" alt="תמונה של הכיסאות החדשים" style="max-width:320px; width:100%; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
             </div>
-        <h1>קהילה יקרה</h1>
-        <div class="section">
-            אנו מתרגשים לבשר כי עד ראש השנה יגיעו בע"ה הכיסאות החדשים לבית הכנסת - מקום התפילה, הלימוד וההתכנסות של כולנו. זהו רגע חשוב ומשמח, הזדמנות להתחדש יחד לקראת השנה החדשה.
+            <h2>🪑 כסאות חדשים לבית הכנסת</h2>
+
+            <div class="amount-display">
+                <div class="amount-label">סה"כ נדרש</div>
+                <div class="main-amount">₪14,400</div>
+                <div class="amount-label">12 כסאות חדשים ב-1,200 ש"ח כ"א</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+                <div class="progress-text">בואו נתחיל!</div>
+            </div>
+
+            <div class="section">
+                כל כסא ניתן להקדיש <span class="highlight">לעילוי נשמת יקיר, לרפואה שלמה או להצלחה</span>, ובכך להשאיר חותם נצחי בבית הכנסת.
+            </div>
         </div>
-        <div class="section">
-            כבר זכינו לשותפות יפה מצד רבים, אך עדיין נותרו כסאות אחרונים. כל כסא ניתן להקדיש <span class="highlight">לעילוי נשמת יקיר, לרפואה שלמה או להצלחה</span>, ובכך להשאיר חותם נצחי בבית הכנסת.
+
+        <!-- פרויקט 2: ריהוט עזרת הנשים -->
+        <div class="project-card">
+            <h2>📚 ריהוט חדר שיעורים</h2>
+
+            <div class="section" style="background: #f0f9ff; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 0; color: #1e40af; font-weight: 500;">
+                    מרחב רב-שימושי המשמש כעזרת נשים בתפילות וכחדר שיעורים -
+                    עם אפשרות לסידור כסאות גמיש לפי הצורך
+                </p>
+            </div>
+
+            <div class="amount-display">
+                <div class="amount-label">סה"כ נדרש</div>
+                <div class="main-amount">₪22,000</div>
+                <div class="amount-label">אלפי שקלים</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 15%"></div>
+                <div class="progress-text">התחלנו!</div>
+            </div>
+
+            <div class="details-list">
+                <div class="detail-item">
+                    <span>ריהוט</span>
+                    <span style="font-weight: bold;">10 אש"ח</span>
+                </div>
+                <div class="detail-item">
+                    <span>סגירה באלומניום</span>
+                    <span style="font-weight: bold;">9 אש"ח</span>
+                </div>
+                <div class="detail-item">
+                    <span>סגירת דלת</span>
+                    <span style="font-weight: bold;">3 אש"ח</span>
+                </div>
+                <div class="detail-item">
+                    <span>סה"כ</span>
+                    <span>22 אש"ח</span>
+                </div>
+            </div>
+
+            <div class="blueprint-section">
+                <h3 style="color: #1e40af; margin-bottom: 15px;">📋 הדמיות הסידור במרחב</h3>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <img src="women-1.jpg" alt="סידור עזרת נשים" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+                        <p style="margin-top: 8px; font-weight: bold; color: #1e40af;">סידור לתפילות (עזרת נשים)</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="women-2.jpg" alt="סידור חדר שיעורים" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+                        <p style="margin-top: 8px; font-weight: bold; color: #1e40af;">סידור לשיעורים</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section">
-            גם אם אינכם יכולים לתרום בעצמכם - תוכלו לקחת חלק גדול בפרויקט: שתפו בני משפחה, חברים ומכרים ותזמינו אותם להיות שותפים בהידור בית ה' לקראת ימים נוראים.
+
+        <!-- פרויקט 3: ריצוף -->
+        <div class="project-card">
+            <h2>🏗️ ריצוף לבית הכנסת</h2>
+
+            <div class="amount-display">
+                <div class="amount-label">סה"כ נדרש</div>
+                <div class="main-amount">₪30,000</div>
+                <div class="amount-label">אלפי שקלים</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 5%"></div>
+                <div class="progress-text">התחלנו!</div>
+            </div>
+
+            <div class="details-list">
+                <div class="detail-item">
+                    <span>כמות מרצפות</span>
+                    <span style="font-weight: bold;">300 יחידות</span>
+                </div>
+                <div class="detail-item">
+                    <span>גודל מרצפת</span>
+                    <span style="font-weight: bold;">60×60 ס"מ</span>
+                </div>
+                <div class="detail-item">
+                    <span>מחיר למרצפת</span>
+                    <span style="font-weight: bold;">₪100</span>
+                </div>
+                <div class="detail-item">
+                    <span>סה"כ</span>
+                    <span>30 אש"ח</span>
+                </div>
+            </div>
         </div>
-        <div class="section">
-            יחד, נוכל להשלים את המלאכה ולפתוח את השנה החדשה במקום מחודש, מכובד ומרומם.
-        </div>
-        <div class="section" style="text-align:center;">
+
+        <div class="section" style="text-align:center; margin: 32px 0;">
             <span class="icon">⚜️</span> התרומות מוכרות לצורכי מס (סעיף 46).
         </div>
         <div class="section">
