@@ -1,8 +1,28 @@
 // פונקציות משותפות לכל הדפים
 
+// יצירת סקציית סרטון YouTube
+function createYouTubeSection(videoId) {
+  if (!videoId) {
+    return ``;
+  }
+
+  return `
+    <div class="video-section" style="margin: 20px 0;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 12px;">
+            <iframe
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"
+                src="https://www.youtube.com/embed/${videoId}"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    `;
+}
+
 // יצירת סקציית תרומות
 function createDonationSection() {
-    return `
+  return `
         <div class="section" style="text-align:center; margin: 32px 0;">
             <span class="icon">⚜️</span> התרומות מוכרות לצורכי מס (סעיף 46).
         </div>
@@ -46,7 +66,7 @@ function createDonationSection() {
 
 // יצירת כותרת עם לוגו
 function createHeader(logoSrc = "reut.png", altText = "רעות") {
-    return `
+  return `
         <div style="text-align: center; margin-bottom: 20px;">
             <img src="${logoSrc}" alt="${altText}" style="height: 80px; width: auto;">
         </div>
@@ -55,7 +75,7 @@ function createHeader(logoSrc = "reut.png", altText = "רעות") {
 
 // יצירת סקציית כסאות
 function createChairsSection(showFoundersMessage = false) {
-    const foundersMessage = showFoundersMessage ? `
+  const foundersMessage = showFoundersMessage ? `
         <div class="section" style="background: #f0f9ff; padding: 16px; border-radius: 8px;">
             <p style="margin: 0; color: #1e40af; font-weight: 500;">
                 <strong>לחברי הקהילה הוותיקים:</strong> אתם הייתם חלק מהמסע של הקהילה הרבה שנים. עכשיו יש לכם הזדמנות להמשיך לתמוך ולעזור לקהילה שהייתם חלק ממנה. כל תרומה תעזור לחזק ולשפר את מקום התפילה והלימוד.
@@ -63,7 +83,7 @@ function createChairsSection(showFoundersMessage = false) {
         </div>
     ` : '';
 
-    return `
+  return `
         <div class="project-card">
             <div style="text-align:center; margin-bottom: 24px;">
                 <img src="reut-rihut.jpg" alt="תמונה של הכיסאות החדשים" style="max-width:320px; width:100%; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
@@ -92,7 +112,7 @@ function createChairsSection(showFoundersMessage = false) {
 
 // יצירת סקציית ריהוט חדר שיעורים
 function createClassroomSection() {
-    return `
+  return `
         <div class="project-card">
             <h2>📚 ריהוט חדר שיעורים</h2>
 
@@ -152,7 +172,7 @@ function createClassroomSection() {
 
 // יצירת סקציית ריצוף
 function createFlooringSection() {
-    return `
+  return `
         <div class="project-card">
             <h2>🏗️ ריצוף לבית הכנסת</h2>
 
@@ -191,34 +211,35 @@ function createFlooringSection() {
 
 // טעינת התוכן כשהדף נטען
 function loadSharedContent() {
-    // יצירת כותרת
-    const headerElement = document.getElementById('header-container');
-    if (headerElement) {
-        headerElement.innerHTML = createHeader();
-    }
+  const headerElement = document.getElementById('header-container');
+  if (headerElement) {
+    headerElement.innerHTML = createHeader();
+  }
 
-    // יצירת סקציית תרומות
-    const donationElement = document.getElementById('donation-container');
-    if (donationElement) {
-        donationElement.innerHTML = createDonationSection();
-    }
+  const videoElement = document.getElementById('video-container');
+  if (videoElement) {
+    const videoId = document.body.getAttribute('data-video-id');
+    videoElement.innerHTML = createYouTubeSection(videoId);
+  }
 
-    // יצירת סקציית כסאות
-    const chairsElement = document.getElementById('chairs-container');
-    if (chairsElement) {
-        const isFoundersPage = document.body.classList.contains('founders-page');
-        chairsElement.innerHTML = createChairsSection(isFoundersPage);
-    }
+  const donationElement = document.getElementById('donation-container');
+  if (donationElement) {
+    donationElement.innerHTML = createDonationSection();
+  }
 
-    // יצירת סקציית חדר שיעורים (רק לדף הראשי)
-    const classroomElement = document.getElementById('classroom-container');
-    if (classroomElement) {
-        classroomElement.innerHTML = createClassroomSection();
-    }
+  const chairsElement = document.getElementById('chairs-container');
+  if (chairsElement) {
+    const isFoundersPage = document.body.classList.contains('founders-page');
+    chairsElement.innerHTML = createChairsSection(isFoundersPage);
+  }
 
-    // יצירת סקציית ריצוף (רק לדף הראשי)
-    const flooringElement = document.getElementById('flooring-container');
-    if (flooringElement) {
-        flooringElement.innerHTML = createFlooringSection();
-    }
+  const classroomElement = document.getElementById('classroom-container');
+  if (classroomElement) {
+    classroomElement.innerHTML = createClassroomSection();
+  }
+
+  const flooringElement = document.getElementById('flooring-container');
+  if (flooringElement) {
+    flooringElement.innerHTML = createFlooringSection();
+  }
 }
