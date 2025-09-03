@@ -19,12 +19,16 @@ function createDonationSection() {
                 <a href="https://cutt.ly/nahalat" target="_blank">https://cutt.ly/nahalat</a><br>
                 <span style="color:#b48e5c; font-weight:bold;">חשוב:</span> לאחר לחיצה על הקישור, יש ללחוץ על <strong>"קהילת נחלת משה"</strong> או על הלוגו:<br>
                 <div style="margin-top:10px; text-align:center;">
-                    <img src="nahalat.png" alt="צילום מסך - לחיצה על נחלת משה" style="max-width:280px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                    <a href="https://cutt.ly/nahalat" target="_blank">
+                        <img src="nahalat.png" alt="צילום מסך - לחיצה על נחלת משה" style="max-width:280px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); cursor:pointer;">
+                    </a>
                 </div>
                 <br>
                 <span style="color:#b48e5c; font-weight:bold;">לתשומת לבכם:</span> אם בחרתם לשלם בתשלומים, יש לבחור <strong>הוראת קבע</strong> ולא עסקת תשלומים. עסקת תשלומים תופסת מסגרת אשראי וגם כרוכה בעמלה מיותרת.<br>
                 <div style="margin-top:10px; text-align:center;">
-                    <img src="horaat-keva.jpg" alt="צילום מסך הוראת קבע" style="max-width:240px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                    <a href="https://cutt.ly/nahalat" target="_blank">
+                        <img src="horaat-keva.jpg" alt="צילום מסך הוראת קבע" style="max-width:240px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); cursor:pointer;">
+                    </a>
                 </div>
             </div>
             <div class="supplier-details">
